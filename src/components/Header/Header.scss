@@ -1,0 +1,54 @@
+@import "../../utils/shared.scss";
+
+header {
+  padding-top: 52px;
+  color: $font;
+  padding-inline: $padding;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 91px;
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  nav {
+    height: fit-content;
+    ul {
+      margin: auto;
+      width: fit-content;
+      display: flex;
+      list-style: none;
+      column-gap: 16px;
+      padding-left: 0px;
+      li {
+        display: grid;
+        place-items: center;
+        margin: 0px;
+        color: $font;
+        &.selected {
+          padding: 8px 16px;
+          background: $second-background;
+          a {
+            color: $font-second;
+          }
+          border-radius: 20px;
+        }
+        a {
+          text-decoration: none;
+          font-size: 16px;
+          font-weight: 500;
+          color: $font;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  header {
+    padding-inline: $padding-mobile;
+  }
+}

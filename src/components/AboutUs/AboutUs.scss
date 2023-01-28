@@ -1,0 +1,119 @@
+@import "../../utils/shared.scss";
+
+.AboutUs--wrapper {
+  width: 100%;
+  height: fit-content;
+  padding: $padding;
+  background-color: $main-background;
+
+  .AboutUs--container {
+    position: relative;
+    background-color: $second-background;
+    border-radius: $border-radius;
+    display: flex;
+    padding-block: $padding;
+    color: $font-second;
+    justify-content: space-between;
+    .right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 89px;
+      width: 100%;
+      .text--container {
+        width: fit-content;
+      }
+    }
+    .left {
+      display: grid;
+      width: 100%;
+      place-content: center;
+    }
+  }
+  .divider {
+    width: 4px;
+    height: 80%;
+    background-color: $font-second;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  h1 {
+    font-size: 48px;
+    width: fit-content;
+  }
+  h6 {
+    margin-bottom: 28px;
+    font-size: 32px;
+    width: fit-content;
+  }
+  p {
+    font-size: 20px;
+    width: fit-content;
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .AboutUs--wrapper {
+    width: 100%;
+    height: fit-content;
+    padding: $padding-mobile;
+    padding-bottom: $padding-mobile-block;
+    background-color: $main-background;
+
+    .AboutUs--container {
+      position: relative;
+      background-color: $second-background;
+      border-radius: $border-radius;
+      display: flex;
+      flex-direction: column;
+      padding-block: 36px;
+      padding-inline: $padding-mobile;
+      color: $font-second;
+      align-content: flex-start;
+      row-gap: 36px;
+      .right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 36px;
+        width: 100%;
+        .text--container {
+          width: fit-content;
+        }
+      }
+      .left {
+        display: grid;
+        width: 100%;
+        place-content: center;
+      }
+    }
+    .divider {
+      width: 0px;
+      height: 80%;
+      background-color: $font-second;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    h1 {
+      font-size: 32px;
+      width: fit-content;
+    }
+    h6 {
+      margin-bottom: 14px;
+      font-size: 20px;
+      width: fit-content;
+    }
+    p {
+      font-size: 16px;
+      width: fit-content;
+      max-width: 400px;
+    }
+  }
+}

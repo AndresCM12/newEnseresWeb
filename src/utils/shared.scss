@@ -1,0 +1,13 @@
+$main-background: #fbf8f3;
+$second-background: #222222;
+$font: #222222;
+$font-second: #fbf8f3;
+$padding: calc(60px + 2vw);
+$padding-mobile: 20px; 
+$margin-block: 52px;
+$border-radius: 20px;
+$padding-mobile-block: 50px;
+
+@media screen and (max-width: 1000px) {
+    $border-radius: 10px;
+}

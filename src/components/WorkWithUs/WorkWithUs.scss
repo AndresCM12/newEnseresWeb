@@ -1,0 +1,122 @@
+@import "../../utils/shared";
+
+.workWithUs--wrapper {
+  padding: $padding;
+  background-color: $second-background;
+
+  .workWithUs--container {
+    border-radius: $border-radius;
+    background-color: $main-background;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .map-container.left {
+      height: 700px;
+      width: 100%;
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+    }
+    .right {
+      display: grid;
+      place-content: center;
+      h1 {
+        font-size: 48px;
+        font-weight: 700;
+        color: $font;
+        &::nth-child(2) {
+          margin-bottom: 36px;
+        }
+      }
+      form {
+        margin-top: 36px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 36px;
+        input {
+          padding-block: 16px;
+          padding-inline-start: 22px;
+          width: 290px;
+          border: 2px solid $second-background;
+          background: $main-background;
+          color: $font;
+          font-weight: 600;
+        }
+        .button {
+          user-select: none;
+          justify-self: flex-end;
+          padding: 16px 24px;
+          background-color: $second-background;
+          color: $font-second;
+          font-weight: 600;
+          display: grid;
+          place-content: center;
+          grid-template-columns: 1fr auto;
+          width: 60%;
+          justify-content: flex-end;
+          align-self: flex-end;
+          grid-column: 33px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .workWithUs--wrapper {
+    padding: $padding-mobile;
+    padding-top: $padding-mobile-block;
+    background-color: $second-background;
+
+    .workWithUs--container {
+      border-radius: $border-radius;
+      background-color: $main-background;
+      display: flex;
+      flex-direction: column-reverse;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .map-container.left {
+        height: 450px;
+        width: 100%;
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+        border-top-left-radius: 0;
+      }
+      .right {
+        padding: $padding-mobile;
+
+        display: grid;
+        place-content: center;
+        h1 {
+          font-size: 32px;
+          font-weight: 700;
+          color: $font;
+          &::nth-child(2) {
+            margin-bottom: 36px;
+          }
+        }
+        form {
+          margin-top: 36px;
+          display: flex;
+          flex-direction: column;
+          row-gap: 36px;
+          input {
+            padding-block: 16px;
+            padding-inline-start: 22px;
+            width: 285px;
+            border: 2px solid $second-background;
+            background: $main-background;
+            color: $font;
+            font-weight: 600;
+          }
+          .button {
+            justify-self: flex-end;
+            padding: 16px 24px;
+            background-color: $second-background;
+            color: $font-second;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}

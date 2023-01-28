@@ -1,0 +1,24 @@
+@import "./shared.scss";
+
+::selection {
+  background: $second-background;
+  color: $font-second;
+  transition: 0.5s;
+}
+
+html::-webkit-scrollbar {
+  width: 20px;
+}
+
+html::-webkit-scrollbar-track {
+  cursor: pointer !important;
+  background-color: $main-background;
+  border-radius: 100px;
+  margin: 0px 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: $second-background;
+  border-radius: 100px;
+  border: 7px solid $main-background;
+}

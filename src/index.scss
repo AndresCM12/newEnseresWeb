@@ -1,0 +1,31 @@
+@import "./utils/shared.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Work Sans", sans-serif;
+}
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.mf-cursor {
+  color: $font;
+  .mf-cursor-text {
+    color: $font-second;
+  }
+  &.-black {
+    color: $font-second;
+    .mf-cursor-text {
+      color: $font;
+    }
+  }
+  &.-white {
+    color: $font;
+    .mf-cursor-text {
+      color: $font-second;
+    }
+  }
+}
