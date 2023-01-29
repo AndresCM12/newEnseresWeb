@@ -1,9 +1,17 @@
 import "./AboutUs.scss";
+import { motion } from "framer-motion";
 
 const AboutUs = () => {
   return (
-    <div className="AboutUs--wrapper" >
-      <div data-cursor="-black" className="AboutUs--container">
+    <div className="AboutUs--wrapper">
+      <motion.div
+        transition={{ ease: "easeOut", duration: 1.5 }}
+        initial={{ y: 400 }}
+        viewport={{ once: true }}
+        whileInView={{ y: 0 }}
+        data-cursor="-black"
+        className="AboutUs--container"
+      >
         <div className="left">
           <h1>Nuestros</h1>
           <h1>Servicios</h1>
@@ -33,7 +41,7 @@ const AboutUs = () => {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

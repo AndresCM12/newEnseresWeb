@@ -1,9 +1,18 @@
 import "./OurServices.scss";
 import hero from "../../images/hero-uno.png";
+import { motion } from "framer-motion";
+
 export default function OurServices() {
   return (
-    <div data-cursor="-black" className="our-services--wrapper">
-      <div data-cursor="-white" className="main--wrapper">
+    <motion.div data-cursor="-black" className="our-services--wrapper">
+      <motion.div
+        transition={{ ease: "easeOut", duration: 1.5 }}
+        initial={{ opacity: 0 }}
+        viewport={{ once: true }}
+        whileInView={{ opacity: 1 }}
+        data-cursor="-white"
+        className="main--wrapper"
+      >
         <div className="left">
           <h1>Sobre</h1>
           <h1>nosotros</h1>
@@ -14,7 +23,7 @@ export default function OurServices() {
           </p>
         </div>
         <img src={hero} />
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }

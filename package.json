@@ -9,6 +9,7 @@
     "serve": "npm run build && vite preview --host"
   },
   "dependencies": {
+    "framer-motion": "^8.5.4",
     "gsap": "^3.11.3",
     "localforage": "^1.10.0",
     "mapbox-gl": "^2.11.1",

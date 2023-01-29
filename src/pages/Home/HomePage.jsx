@@ -7,6 +7,7 @@ import OurServices from "../../components/OurServices/OurServices";
 import Planns from "../../components/Planns/Planns";
 import WorkWithUs from "../../components/WorkWithUs/WorkWithUs";
 import ClientComments from "../../components/ClientComments/ClientComments";
+import SeparatorComponent from "../../components/Separator/SeparatorComponent";
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
       <AboutUs />
       <OurServices />
       <Planns />
+      <SeparatorComponent />
       <ClientComments />
       <WorkWithUs />
     </div>

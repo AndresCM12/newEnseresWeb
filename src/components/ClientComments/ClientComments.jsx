@@ -3,12 +3,19 @@ import userImage from "../../images/comment-dummy.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
+import { motion } from "framer-motion";
 
 import { Navigation } from "swiper";
 
 export default function ClientComments() {
   return (
-    <div className="comments--wrapper">
+    <motion.div
+      transition={{ ease: "easeOut", duration: 1.5 }}
+      initial={{ opacity: 0 }}
+      viewport={{ once: true }}
+      whileInView={{ opacity: 1 }}
+      className="comments--wrapper"
+    >
       <div className="comments--container">
         <h1>Conoce lo que dicen</h1>
         <h1>nuestros clientes</h1>
@@ -85,6 +92,6 @@ export default function ClientComments() {
           </div>
         </Swiper>
       </div>
-    </div>
+    </motion.div>
   );
 }

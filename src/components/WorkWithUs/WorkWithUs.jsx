@@ -2,6 +2,7 @@ import "./WorkWithUs.scss";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useRef, useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoibWFsdGhlYWRhIiwiYSI6ImNsNmxqNnd5ejAzZXAzcXV4NXRxcXQ4eTUifQ.vndUP9Cmdl9FeXQSKtL_wA";
@@ -27,7 +28,13 @@ export default function WorkWithUs() {
   return (
     <>
       <div className="workWithUs--wrapper" data-cursor="-black">
-        <div className="workWithUs--container">
+        <motion.div
+          transition={{ ease: "easeOut", duration: 1.5 }}
+          initial={{ y: 400 }}
+          viewport={{ once: true }}
+          whileInView={{ y: 0 }}
+          className="workWithUs--container"
+        >
           <div className="map-container left" ref={mapContainer}></div>
           <div data-cursor="-white" className="right">
             <h1>Trabajemos</h1>
@@ -36,7 +43,11 @@ export default function WorkWithUs() {
               <input type="text" placeholder="Nombre" />
               <input type="email" placeholder="Correo" />
               <input type="text" placeholder="Mensaje" />
-              <div className="button send" data-cursor-text="Enviar!" data-cursor-stick=".button.send">
+              <div
+                className="button send"
+                data-cursor-text="Enviar!"
+                data-cursor-stick=".button.send"
+              >
                 Enviar{" "}
                 <span className="material-symbols-outlined">
                   arrow_forward_ios
@@ -44,7 +55,7 @@ export default function WorkWithUs() {
               </div>
             </form>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );
