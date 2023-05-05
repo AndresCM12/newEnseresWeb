@@ -40,6 +40,10 @@ footer {
       font-size: 20px;
       font-weight: 400;
     }
+    a{
+      color: $font-second;
+      text-decoration: none;
+    }
   }
 }
 @media screen and (max-width: 1000px) {

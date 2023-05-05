@@ -8,11 +8,15 @@ export default function Footer() {
         <div className="footer-left">
           <div className="text--wrapper">
             <h2>Phone Number</h2>
-            <h6>+52 614 420 78 69</h6>
+            <a href="https://wa.me/526144207869">
+              <h6>+52 614 420 78 69</h6>
+            </a>
           </div>
           <div className="text--wrapper">
             <h2>Correo</h2>
-            <h6>soporte@enseres.com</h6>
+            <a href="mailto:q.chavezandres@gmail.com">
+              <h6>soporte@enseres.com</h6>
+            </a>
           </div>
         </div>
         <motion.div

@@ -1,7 +1,8 @@
 @import "../../utils/shared.scss";
 
 header {
-  padding-top: 52px;
+  padding-top: 48px;
+  padding-bottom: 4px;
   color: $font;
   padding-inline: $padding;
   text-align: center;
@@ -9,10 +10,16 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 91px;
+  position: sticky;
+  top: -1px;
+  z-index: 2;
+  background-color: $main-background;
+  transition: all 0.3s ease-in-out;
   h1 {
     font-size: 24px;
     font-weight: bold;
     margin: 0;
+    cursor: pointer;
   }
   nav {
     height: fit-content;
@@ -28,6 +35,7 @@ header {
         place-items: center;
         margin: 0px;
         color: $font;
+        cursor: pointer;
         &.selected {
           padding: 8px 16px;
           background: $second-background;
@@ -45,9 +53,13 @@ header {
       }
     }
   }
+
+  &.is-pinned{
+    padding-top: 4px;
+  }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1391px) {
   header {
     padding-inline: $padding-mobile;
   }

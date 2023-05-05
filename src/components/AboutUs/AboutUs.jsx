@@ -5,10 +5,10 @@ const AboutUs = () => {
   return (
     <div className="AboutUs--wrapper">
       <motion.div
-        transition={{ ease: "easeOut", duration: 1.5 }}
-        initial={{ y: 400 }}
+        transition={{ ease: "easeOut", duration: 1 }}
+        initial={{ opacity: 0 }}
         viewport={{ once: true }}
-        whileInView={{ y: 0 }}
+        whileInView={{ opacity: 1 }}
         data-cursor="-black"
         className="AboutUs--container"
       >

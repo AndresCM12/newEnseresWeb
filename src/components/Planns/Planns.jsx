@@ -1,4 +1,5 @@
 import "./Planns.scss";
+import { motion } from "framer-motion";
 
 export default function Planns() {
   return (
@@ -10,44 +11,55 @@ export default function Planns() {
         </div>
         <div className="planns--container">
           <div data-cursor="-black" className="plann">
-            <h3>Enseres</h3>
             <h3>Eventos</h3>
+            <h3>Enseres</h3>
             <div className="divider"></div>
             <p>
               Disfruta de un evento completamente hermoso rodeado de tus
-              invitados disfrutando del lugar.
+              invitados disfrutando del lugar y de un excelente servicio.
             </p>
-            <div
+            <motion.div
               data-cursor-text="Ir!"
               data-cursor-stick=".button"
               className="button"
               data-cursor="-white"
+              whileHover={{ scale: 1.06 }}
+              transition={{ ease: "easeOut", duration: 0.5 }}
+              whileTap={{ scale: 0.9 }}
+              onTap={() => {
+                window.location.href = "#informacion";
+              }}
             >
-              Contratar{" "}
+              Más Información
               <span className="material-symbols-outlined">
                 arrow_forward_ios
               </span>
-            </div>
+            </motion.div>
           </div>
           <div data-cursor="-black" className="plann">
+            <h3>Paquetes</h3>
             <h3>Enseres</h3>
-            <h3>Empresarial</h3>
             <div className="divider"></div>
             <p>
-              Disfruta de un evento increíble rodeado de esas personas que día a
-              día te están apoyando.
+              Conoce toda la variedad de paquetes que ofrecemos para facilitar tu evento.
             </p>
-            <div
+            <motion.div
               data-cursor-text="Ir!"
               data-cursor-stick=".button.right"
               className="button right"
               data-cursor="-white"
+              whileHover={{ scale: 1.06 }}
+              transition={{ ease: "easeOut", duration: 0.5 }}
+              whileTap={{ scale: 0.9 }}
+              onTap={() => {
+                window.location.href = "/paquetes";
+              }}
             >
-              Más información{" "}
+              Más Información
               <span className="material-symbols-outlined">
                 arrow_forward_ios
               </span>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

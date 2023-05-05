@@ -41,7 +41,7 @@
           color: $font;
           font-weight: 600;
         }
-        .button {
+        button {
           user-select: none;
           justify-self: flex-end;
           padding: 16px 24px;
@@ -54,6 +54,8 @@
           width: 60%;
           justify-content: flex-end;
           align-self: flex-end;
+          align-items: center;
+          border: none;
           grid-column: 33px;
         }
       }

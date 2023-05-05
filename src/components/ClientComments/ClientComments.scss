@@ -18,6 +18,7 @@
       background-color: $second-background;
       width: fit-content;
       border-radius: $border-radius;
+      margin-right: 40px;
       img {
         width: 270px;
         height: 100%;
@@ -176,7 +177,7 @@
           padding: 30px 20px;
           p {
             color: $font-second;
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 400;
             max-width: 340px;
             margin-bottom: 24px;
@@ -209,5 +210,19 @@
         }
       }
     }
+  }
+  main .comments--wrapper .comments--container .card .text--wrapper p{
+    font-size: 12px;
+    max-width: 100%;
+  }
+  main .comments--wrapper .comments--container .card{
+   border-radius: 10px;
+    margin-right: 8px !important;
+  }
+  main .comments--wrapper .comments--container .card img{
+    width: 100px;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
 }

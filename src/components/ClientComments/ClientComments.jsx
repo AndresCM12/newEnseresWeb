@@ -25,7 +25,6 @@ export default function ClientComments() {
           modules={[Navigation]}
           loop={true}
           speed={1100}
-          spaceBetween={40}
           slidesPerView={"auto"}
           id="swiperContainer"
         >

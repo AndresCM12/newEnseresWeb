@@ -27,10 +27,14 @@ export default function WorkWithUs() {
   });
   return (
     <>
-      <div className="workWithUs--wrapper" data-cursor="-black">
+      <div
+        className="workWithUs--wrapper"
+        data-cursor="-black"
+        id="informacion"
+      >
         <motion.div
           transition={{ ease: "easeOut", duration: 1.5 }}
-          initial={{ y: 400 }}
+          initial={{ y: 200 }}
           viewport={{ once: true }}
           whileInView={{ y: 0 }}
           className="workWithUs--container"
@@ -39,20 +43,27 @@ export default function WorkWithUs() {
           <div data-cursor="-white" className="right">
             <h1>Trabajemos</h1>
             <h1>juntos</h1>
-            <form>
-              <input type="text" placeholder="Nombre" />
-              <input type="email" placeholder="Correo" />
-              <input type="text" placeholder="Mensaje" />
-              <div
+            <form
+              action="https://mailthis.to/q.chavezandres@gmail.com"
+              method="POST"
+            >
+              <input type="text" placeholder="Nombre" name="Nombre" required />
+              <input type="email" placeholder="Correo" name="Email" required />
+              <input type="text" placeholder="Mensaje" name="Mensaje" />
+              <motion.button
+                whileHover={{ scale: 1.06 }}
+                transition={{ ease: "easeOut", duration: 0.5 }}
+                whileTap={{ scale: 0.9 }}
                 className="button send"
                 data-cursor-text="Enviar!"
                 data-cursor-stick=".button.send"
+                type="submit"
               >
-                Enviar{" "}
+                Enviar
                 <span className="material-symbols-outlined">
                   arrow_forward_ios
                 </span>
-              </div>
+              </motion.button>
             </form>
           </div>
         </motion.div>

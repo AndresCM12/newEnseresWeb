@@ -1,18 +1,20 @@
-import {  useEffect } from "react";
+import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
-import Footer from "../../components/Footer/Footer";
+import Footer from "../../../components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
 
-import "./App.scss";
-import Header from "../../components/Header/Header";
+import "./HomeApp.scss";
+import Header from "../../../components/Header/Header";
 
 import MouseFollower from "mouse-follower";
 import gsap from "gsap";
+
 MouseFollower.registerGSAP(gsap);
 
-function App() {
-  let navigate = useNavigate();
+function HomeApp() {
   let cursor = null;
+  
+  // cursor use Effect
   useEffect(() => {
     if (cursor === null) {
       cursor = new MouseFollower({
@@ -53,18 +55,17 @@ function App() {
         hideMediaTimeout: 300,
       });
     }
-    navigate("/home");
   }, []);
 
   return (
-    <div className="App">
+    <>
       <Header />
       <main>
         <Outlet />
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
 
-export default App;
+export default HomeApp;

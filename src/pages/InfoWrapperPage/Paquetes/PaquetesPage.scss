@@ -1,0 +1,227 @@
+@import "../../../utils/shared.scss";
+
+main.paquetes--main--wrapper{
+  overflow: hidden;
+}
+
+section.paquetes {
+  padding: $padding;
+  background-color: $main-background;
+}
+
+article.graphs--wrapper {
+  background-color: $second-background;
+  border-radius: $border-radius;
+  padding: $padding;
+  h1 {
+    color: $font-second;
+    font-size: 48px;
+    font-weight: 700;
+    padding-bottom: $padding;
+  }
+  div.graphs--container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: $padding-mobile;
+    column-gap: $padding-mobile;
+  }
+  div.graph {
+    width: 250px;
+    height: 250px;
+    background-color: $main-background;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      font-size: 50px;
+      font-weight: 700;
+      color: $font;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 600;
+      color: $font;
+      text-align: center;
+    }
+  }
+}
+
+section.separator {
+  background-color: $second-background;
+  margin-bottom: $padding;
+  margin-inline: $padding;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: $padding;
+
+  div.logo--wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 55px;
+    user-select: none;
+    img {
+      cursor: normal;
+      width: 100px;
+      height: 47px;
+    }
+    .separator {
+      width: 300px;
+      height: 4px;
+      background-color: $main-background;
+    }
+  }
+}
+
+section.paquetes--wrapper {
+  padding: $padding;
+  padding-top: 0px;
+  background-color: $main-background;
+  display: flex;
+  flex-direction: column;
+  div.paquetes--grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: $padding-mobile-block;
+    width: 100%;
+    column-gap: 2vw;
+    div.paquete {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $second-background;
+      width: 100%;
+      padding-inline: $padding;
+      border-radius: 10px;
+      height: 100px;
+      p {
+        color: $font-second;
+        font-size: 20px;
+        font-weight: 600;
+      }
+      &.wild {
+        grid-column: 2 / 5;
+      }
+      &.wild2 {
+        grid-column: 1 / 4;
+      }
+    }
+
+    @media screen and (max-width: 1391px) {
+    }
+  }
+  div.title {
+    h1 {
+      color: $font;
+      font-size: 48px;
+      font-weight: 700;
+      padding-bottom: $padding-mobile;
+      max-width: 759px;
+    }
+    p {
+      color: $font;
+      font-size: 16px;
+      font-weight: 500;
+      padding-bottom: $padding;
+
+    }
+  }
+}
+@media screen and (max-width: 1391px) {
+  section.paquetes--wrapper div h1{
+    font-size: 32px;
+    font-weight: 700;
+    max-width: 100%;
+
+  }
+  section.paquetes {
+    padding: $padding-mobile;
+    padding-top: $padding;
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+    }
+  }
+  section.separator {
+    margin: $padding-mobile;
+  }
+  section.paquetes--wrapper {
+    padding: $padding-mobile;
+    padding-block: $padding-mobile-block;
+  }
+}
+@media screen and (max-width: 1210px) {
+  section.paquetes--wrapper div.paquetes--grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-column: 10px;
+    div.paquete {
+      width: calc(49% - 5px);
+      p {
+        color: $font-second;
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+@media screen and (max-width: 731px) {
+  article.graphs--wrapper div.graphs--container {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  
+  article.graphs--wrapper {
+    padding: $padding-mobile;
+  }
+  article.graphs--wrapper div.graph {
+    width: 200px;
+    height: 200px;
+  }
+  section.separator {
+    padding: $padding-mobile-block;
+  }
+  section.paquetes--wrapper div.paquetes--grid{
+    row-gap: 8px;
+  }
+  main section.paquetes--wrapper div.paquetes--grid div.paquete p{
+    font-size: 16px;
+  }
+  section.separator {
+    border-radius: 10px;
+    padding: $padding-mobile;
+    height: 100px;
+    div.logo--wrapper {
+      column-gap: 35px;
+      img {
+        cursor: normal;
+        width: 60px;
+        height: 27px;
+      }
+      .separator {
+        width: 300px;
+        height: 4px;
+        background-color: $main-background;
+      }
+    }
+  }
+  section.paquetes--wrapper div.paquetes--grid {
+    div.paquete {
+      width: 100%;
+      p {
+        color: $font-second;
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+  }
+}

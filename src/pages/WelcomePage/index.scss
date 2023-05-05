@@ -1,0 +1,86 @@
+@import "../../utils/shared.scss";
+a {
+  text-decoration: none;
+}
+#IntroScreen {
+  width: 100%;
+  height: 100vh;
+  background-color: $main-background;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: $padding;
+  @media screen and (max-width: 768px) {
+    padding: $padding-mobile;
+  }
+  .intro--main--wrapper {
+    background-color: $second-background;
+    height: 493px;
+    width: 100%;
+    border-radius: $border-radius;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 61px;
+    padding: $padding-mobile;
+    cursor: grab;
+
+    .buttons--wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      column-gap: 30px;
+      row-gap: 30px;
+      div {
+        width: 138px;
+        padding-block: 8px;
+        color: $font-second;
+        background-color: $second-background;
+        border-radius: 20px;
+        border: 2px solid $font-second;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+    .logo--wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 55px;
+      user-select: none;
+
+      img {
+        cursor: normal;
+        width: 125px;
+        height: 57px;
+      }
+      .separator {
+        width: 300px;
+        height: 4px;
+        background-color: $main-background;
+      }
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+      text-align: center;
+      color: $font-second;
+    }
+  }
+  .link--to--home {
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 50px;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 150px;
+    }
+    color: $font;
+    font-weight: 500;
+  }
+}
